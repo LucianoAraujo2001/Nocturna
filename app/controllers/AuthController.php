@@ -24,6 +24,7 @@ class AuthController extends Controller
         $user = trim($_POST['user'] ?? '');
         $pass = trim($_POST['pass'] ?? '');
 
+
         if ($user === ADMIN_USER && $pass === ADMIN_PASS) {
             $_SESSION['is_admin'] = true;
             header('Location: ' . BASE_URL . '/index.php?controller=product&action=admin');
@@ -38,7 +39,6 @@ class AuthController extends Controller
 
     public function logout()
     {
-        // Cerrar sesión
         $_SESSION = [];
         if (session_id() !== '' || isset($_COOKIE[session_name()])) {
             setcookie(session_name(), '', time() - 3600, '/');
