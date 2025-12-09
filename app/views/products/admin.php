@@ -1,4 +1,5 @@
 <section class="section">
+    
     <h1>Administrar remeras</h1>
     <p class="section-subtitle">
         Listado interno de productos. Desde acá podés editarlos o cargar nuevas remeras.
@@ -10,10 +11,19 @@
             Cargar nueva remera
         </a>
         <a class="btn-ghost"
+           href="<?= BASE_URL ?>/index.php?controller=curiosity&action=admin">
+            Administrar notas nocturnas
+        </a>
+        <a class="btn-ghost"
+           href="<?= BASE_URL ?>/index.php?controller=auth&action=logout">
+            Cerrar sesión
+        </a>
+        <a class="btn-ghost"
            href="<?= BASE_URL ?>/index.php?controller=product&action=index">
             Ver catálogo público
         </a>
     </div>
+
 
     <div class="table-wrapper">
         <table class="admin-table">

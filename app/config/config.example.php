@@ -5,6 +5,10 @@ define('DB_NAME', 'nombre_base');
 define('DB_USER', 'usuario_base');
 define('DB_PASS', 'password_aqui');
 
+// Credenciales simples para el panel de administración
+define('ADMIN_USER', 'usuario');      // podés cambiarlo
+define('ADMIN_PASS', 'contraseña');    // poné algo que recuerdes
+
 
 
 // Conexión PDO a la base de datos

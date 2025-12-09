@@ -30,12 +30,14 @@ class ProductController extends Controller
     /** Vista con el formulario para cargar nueva remera */
     public function create()
     {
+        $this->requireAdmin();
         $this->render('products/create');
     }
 
     /** Procesa el formulario y guarda en BD */
     public function store()
     {
+        $this->requireAdmin();
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             header('Location: ' . BASE_URL . '/index.php?controller=product&action=create');
             exit;
@@ -77,23 +79,25 @@ class ProductController extends Controller
             'image'       => $imageName,
         ]);
 
-        header('Location: ' . BASE_URL . '/index.php?controller=product&action=index');
+        header('Location: ' . BASE_URL . '/index.php?controller=product&action=admin');
         exit;
     }
     public function edit()
-{
-    $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
-    $product = Product::find($id);
-
-    if (!$product) {
-        die('Producto no encontrado.');
+    {
+        $this->requireAdmin();
+        $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+        $product = Product::find($id);
+    
+        if (!$product) {
+            die('Producto no encontrado.');
+        }
+    
+        $this->render('products/edit', ['product' => $product]);
     }
-
-    $this->render('products/edit', ['product' => $product]);
-}
 
     public function update()
     {
+        $this->requireAdmin();
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             header('Location: ' . BASE_URL . '/index.php?controller=product&action=index');
             exit;
@@ -139,11 +143,12 @@ class ProductController extends Controller
             'image'       => $imageName, // null = dejar la anterior
         ]);
 
-        header('Location: ' . BASE_URL . '/index.php?controller=product&action=show&id=' . $id);
+        header('Location: ' . BASE_URL . '/index.php?controller=product&action=admin');
         exit;
     }
     public function admin()
     {
+        $this->requireAdmin();
         $products = Product::all();
     
         $this->render('products/admin', [
