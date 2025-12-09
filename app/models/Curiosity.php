@@ -54,7 +54,7 @@ class Curiosity
             'title'   => $data['title'],
             'band'    => $data['band'],
             'type'    => $data['type'],
-            'image'   => $data['image'],  // null => mantiene la anterior
+            'image'   => $data['image'], 
             'content' => $data['content'],
         ]);
     }

@@ -63,7 +63,7 @@ class ProductController extends Controller
             $safeName = time() . '_' . preg_replace('/[^a-zA-Z0-9_\.-]/', '_', $originalName);
             $targetPath = $uploadDir . $safeName;
 
-            // Solo por seguridad, podrías chequear tipo MIME, etc.
+
             if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
                 $imageName = $safeName;
             } else {
@@ -119,7 +119,7 @@ class ProductController extends Controller
             die('Nombre y precio son obligatorios.');
         }
 
-        // por defecto, no cambiamos la imagen
+
         $imageName = null;
 
         if (!empty($_FILES['image']['name'])) {
@@ -140,7 +140,7 @@ class ProductController extends Controller
             'description' => $description,
             'price'       => $price,
             'category'    => $category,
-            'image'       => $imageName, // null = dejar la anterior
+            'image'       => $imageName, 
         ]);
 
         header('Location: ' . BASE_URL . '/index.php?controller=product&action=admin');

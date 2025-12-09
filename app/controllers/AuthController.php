@@ -5,7 +5,7 @@ class AuthController extends Controller
 {
     public function login()
     {
-        // Si ya está logueado, lo mando directo al panel
+
         if (!empty($_SESSION['is_admin']) && $_SESSION['is_admin'] === true) {
             header('Location: ' . BASE_URL . '/index.php?controller=product&action=admin');
             exit;

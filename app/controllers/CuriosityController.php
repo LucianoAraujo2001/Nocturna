@@ -22,14 +22,13 @@ class CuriosityController extends Controller
         $this->render('curiosity/show', ['curiosity' => $curiosity]);
     }
 
-    /** Vista para cargar curiosidades/reseñas (solo por URL) */
+
     public function create()
     {
         $this->requireAdmin();
         $this->render('curiosity/create');
     }
 
-    /** Procesa el formulario */
     public function store()
     {
         $this->requireAdmin();
@@ -47,8 +46,7 @@ class CuriosityController extends Controller
         if ($title === '' || $content === '') {
             die('El título y el contenido son obligatorios.');
         }
-    
-        // --- Manejo de imagen opcional ---
+
         $imageName = null;
     
         if (!empty($_FILES['image']['name'])) {
@@ -73,11 +71,11 @@ class CuriosityController extends Controller
             'title'   => $title,
             'band'    => $band,
             'type'    => $type,
-            'image'   => $imageName,   // <- ahora sí se guarda
+            'image'   => $imageName,   
             'content' => $content,
         ]);
     
-        // Redirige al panel admin, no al show
+
         header('Location: ' . BASE_URL . '/index.php?controller=curiosity&action=admin');
         exit;
     }

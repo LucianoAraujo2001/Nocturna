@@ -91,7 +91,6 @@ class Product
             'description' => $data['description'],
             'price'       => $data['price'],
             'category'    => $data['category'],
-            // si viene null, COALESCE deja la imagen anterior
             'image'       => $data['image'],
         ]);
     }
