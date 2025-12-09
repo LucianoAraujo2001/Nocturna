@@ -13,7 +13,7 @@
 
         <form class="form-grid"
               action="<?= BASE_URL ?>/index.php?controller=auth&action=authenticate"
-              method="post">
+              method="POST">
 
             <div class="form-field">
                 <label for="user">Usuario</label>
