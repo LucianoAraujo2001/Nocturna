@@ -35,7 +35,7 @@ class ContactController extends Controller
             'message' => $message,
         ]);
 
-        $to      = 'contacto@nocturnaclothing.store';
+        $to      = 'formulariopagina@nocturnaclothing.store';
         $mailSub = 'Nuevo mensaje desde Nocturna: ' . $finalSubject;
 
         $body  = "Te escribió desde la web Nocturna:\n\n";
