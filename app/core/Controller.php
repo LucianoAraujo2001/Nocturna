@@ -1,6 +1,14 @@
 <?php
 class Controller
 {
+    protected function requireAdmin()
+    {
+        if (empty($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
+            header('Location: ' . BASE_URL . '/index.php?controller=auth&action=login');
+            exit;
+        }
+    }
+
     protected function render($view, $data = [])
     {
         extract($data);

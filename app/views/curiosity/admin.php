@@ -10,10 +10,19 @@
             Cargar nueva nota
         </a>
         <a class="btn-ghost"
+           href="<?= BASE_URL ?>/index.php?controller=product&action=admin">
+            Administrar remeras
+        </a>
+        <a class="btn-ghost"
+           href="<?= BASE_URL ?>/index.php?controller=auth&action=logout">
+            Cerrar sesión
+        </a>
+        <a class="btn-ghost"
            href="<?= BASE_URL ?>/index.php?controller=curiosity&action=index">
             Ver notas públicas
         </a>
     </div>
+
 
     <div class="table-wrapper">
         <table class="admin-table">
