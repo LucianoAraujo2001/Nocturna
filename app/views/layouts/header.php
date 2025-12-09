@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Nocturna Clothing Store</title>
+    <meta name="description" content="Nocturna Clothing Store: remeras de rock, metal, anime, juegos y estética gótica. Diseños nocturnos, gatos y distorsión.">
+    <meta name="keywords" content="nocturna, nocturna clothing store, remeras rock, remeras anime, remeras goticas, remeras gamer">
+    <meta name="author" content="Nocturna Clothing Store">
+    <link rel="icon" type="image/png" href="<?= BASE_URL ?>/public/img/favicon.png">
     <link rel="stylesheet" href="<?= BASE_URL ?>/public/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
