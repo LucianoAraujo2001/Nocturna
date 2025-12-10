@@ -34,4 +34,31 @@
             </div>
         </form>
     </div>
+
+    <div class="form-card" style="margin-top: 1.5rem;">
+        <p class="section-subtitle" style="margin-bottom: 1rem;">
+            También podés escribirnos por nuestras redes:
+        </p>
+        <div class="form-actions" style="justify-content: flex-start;">
+            <a class="btn-ghost btn-instagram"
+               href="https://www.instagram.com/nocturnaclothingstore/"
+               target="_blank"
+               rel="noopener">
+                Ir al Instagram de Nocturna
+                <img src="<?= BASE_URL ?>/public/img/ig.png"
+                     alt="Instagram"
+                     class="btn-icon">
+            </a>
+
+            <a class="btn-primary btn-whatsapp"
+               href="https://wa.me/543644152481"
+               target="_blank"
+               rel="noopener">
+                Escribir por WhatsApp
+                <img src="<?= BASE_URL ?>/public/img/wp.png"
+                     alt="WhatsApp"
+                     class="btn-icon">
+            </a>
+        </div>
+    </div>
 </section>

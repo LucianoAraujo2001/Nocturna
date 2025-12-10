@@ -606,3 +606,24 @@ body {
     background: rgba(15, 23, 42, 0.9);
 }
 
+.btn-icon {
+    width: 35px;
+    height: 35px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+.btn-whatsapp {
+    background: #25d3655b;
+    color: white;
+}
+.btn-instagram {
+    background-image: linear-gradient(
+      45deg,
+      #f585297d,
+      #f7773777,
+      #dd2a7b82,
+      #8234af79,
+      #515cd489
+    );
+    color: white;
+}
